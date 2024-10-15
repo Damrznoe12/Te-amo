@@ -17,6 +17,19 @@ $(document).ready(function(){
           var scale = 1 + Math.sin(now * Math.PI) * 0.1; // Calculamos la escala basada en la función seno
           $(this).css('transform', 'scale(' + scale + ')');
         }}); // Animación de ondulación
+        
       });
     });
+
+    // Espera a que todo el contenido de la página haya cargado
+window.addEventListener('load', function() {
+  // Selecciona el elemento de audio por su ID
+  var audio = document.getElementById('love-audio');
+  
+  // Reproduce la música automáticamente
+  audio.play().catch(function(error) {
+    // Si el navegador bloquea la reproducción automática, manejar el error aquí
+    console.log("El navegador ha bloqueado la reproducción automática.");
+  });
+});
   });
