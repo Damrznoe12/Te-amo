@@ -21,6 +21,13 @@ $(document).ready(function(){
       });
     });
 
+    $(document).ready(function() {
+      $('#heart-container').click(function() {
+        $('#card').toggle(); // Cambiar la visibilidad de la carta al hacer clic
+      });
+    });
+    
+
     // Espera a que todo el contenido de la página haya cargado
 window.addEventListener('load', function() {
   // Selecciona el elemento de audio por su ID
